@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoteGrab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<main>
+  <h1>NoteGrab</h1>
+  <p class="lede">Paste your lecture notes and get a practice quiz built from them.</p>
+
+  <div class="sheet">
+    <textarea id="notes" aria-label="Your notes" placeholder="Paste or type your notes here…"></textarea>
+  </div>
+
+  <div class="controls">
+    <label for="count">Questions</label>
+    <select id="count">
+      <option>3</option><option selected>5</option><option>8</option><option>10</option>
+    </select>
+    <button class="primary" id="go">Make quiz</button>
+    <span class="status" id="status" role="status"></span>
+  </div>
+
+  <section id="quiz" aria-live="polite"></section>
+</main>
+</body>
+</html>
